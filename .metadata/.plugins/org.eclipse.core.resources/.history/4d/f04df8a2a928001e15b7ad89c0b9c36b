@@ -1,0 +1,24 @@
+package com.example.demo.student;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StudentController {
+
+	private StudentService stuService;
+	
+	public StudentController(StudentService stuService) {
+		super();
+		this.stuService = stuService;
+	}
+
+	@RequestMapping(path = "/student")
+	public String getStudent()
+	{
+		Student s1 = new Student(456, "Rajesh", "30-05-1985", "rajesh@gmail.com", 18);
+		return s1.toString();
+	}
+}

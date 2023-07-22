@@ -1,0 +1,11 @@
+package com.example.demo.student;
+
+import java.util.List;
+
+public class StudentService {
+	public List<Student> getStudents()
+	{
+		Student s1 = new Student(456, "Rajesh", "30-05-1985", "rajesh@gmail.com", 18);
+		return List.of(s1);
+	}
+}
